@@ -3,184 +3,368 @@
 <head>
 	<title>Dough It Right</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Meow+Script&family=MonteCarlo&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<img src="img/user_profile.jpeg" alt="Generic white and grey user profile placeholder." width="100">
+	<nav class="navbar">
+  		<div class="logo">
+  			<a href="index.html" class="logo_link">
+      			<img src="img/placeholder.jpg" alt="Dough It Right logo" width="100">
+      			<span>Dough It Right</span>
+      		</a>
+    	</div>
+
+    	<ul class="nav_links">
+      		<li>
+      			<a href="#"><i class="fa-solid fa-heart"></i> Favorites</a>
+      		</li>
+      		<li>
+      			<a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+      		</li>
+    	</ul>
+  </nav>
+	<header class="hero_section">
 		<h1>Hi, User</h1>
 		<p>Let's get baking!</p>
-
 		<input type="text" placeholder="Search...">
 	</header>
 
-	<hr>
 
-	<section>
-		<ul>
-			<li>Cakes</li>
-			<li>Cookies</li>
-			<li>Bars</li>
-			<li>Cupcakes</li>
-			<li>Pastries</li>
-			<li>Breads</li>
-			<li>Pies</li>
-			<li>No-Bake</li>
-			<li>Frozen</li>
-			<li>Layered</li>
-			<li>Breakfast</li>
-			<li>Under 30 Minutes</li>
-			<li>Other</li>
-		</ul>
+	<section class="categories">
+	  <div class="category-list">
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Cakes">
+	      <span>Cakes</span>
+	    </a>
+
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Cookies">
+	      <span>Cookies</span>
+	    </a>
+
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Bars">
+	      <span>Bars</span>
+	    </a>
+
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Cupcakes">
+	      <span>Cupcakes</span>
+	    </a>
+
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Pastries">
+	      <span>Pastries</span>
+	    </a>
+
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Breads">
+	      <span>Breads</span>
+	    </a>
+
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Pies">
+	      <span>Pies</span>
+	    </a>
+
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="No-Bake">
+	      <span>No-Bake</span>
+	    </a>
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Frozen">
+	      <span>Frozen</span>
+	    </a>
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Layered">
+	      <span>Layered</span>
+	    </a>
+	    <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Breakfast">
+	      <span>Breakfast</span>
+	    </a>
+	     <a href="#" class="category">
+	      <img src="img/placeholder.jpg" alt="Under 30 Minutes">
+	      <span>Under 30 Minutes</span>
+	    </a>
+	  </div>
 	</section>
 
-	<hr>
 
-	<section>
+
+	<section class="recipe_section">
 		<h2>Recommended for You</h2>
 
-		<article>
-			<img src="img/blueberry_muffin.jpg" alt="An unwrapped blueberry muffin on a plate." width="200">
-			<h3>Blueberry Muffins</h3>
-			<p>32 minutes</p>
-			<p>4.9</p>
-		</article>
+		<div class="card_row">
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/blueberry_muffins_ai.jpg" alt="An unwrapped blueberry muffin on a plate.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+  				</div>
+				<div class="card_info">
+					<h3>Blueberry Muffins</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>32 min</span>
+						<span><i class="fa-solid fa-star"></i>4.9</span>
+					</div>
+				</div>
+			</article>
 
-		<article>
-			<img src="img/brownies.jpg" alt="Two brownies stacked." width="200">
-			<h3>Fudge Brownies</h3>
-			<p>49 minutes</p>
-			<p>4.5</p>
-		</article>
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/brownies_ai.jpg" alt="Two brownies stacked.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+  				</div>
+				<div class="card_info">
+					<h3>Fudge Brownies</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>49 min</span>
+						<span><i class="fa-solid fa-star"></i>4.5</span>
+					</div>
+				</div>
+			</article>
 
-		<article>
-			<img src="img/snickerdoodles.jpg" alt="Snickerdoodles on a cooling rack with a bowl of cinammon sugar." width="200">
-			<h3>Snickerdoodles</h3>
-			<p>30 minutes</p>
-			<p>4.7</p>
-		</article>
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/snickerdoodles_ai.png" alt="Snickerdoodles on a cooling rack with a bowl of cinammon sugar.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+  				</div>
+				<div class="card_info">
+					<h3>Snickerdoodles</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>30 min</span>
+						<span><i class="fa-solid fa-star"></i>4.7</span>
+					</div>
+				</div>
+			</article>
+		</div>
 	</section>
 
-	<hr>
 
-	<section>
+
+	<section class="top_bakers">
 		<h2>Top Bakers</h2>
-			<img src="img/paul_hollywood.jpg" alt="Paul Hollywood on blue background." width="100">
-		<ul>
-			<li>Paul Hollywood</li>
-		</ul>
-			<img src="img/duff_goldman.jpg" alt="Duff Goldman holding a whisk on a white background." width="100">
-		<ul>
-			<li>Duff Goldman</li>
-		</ul>
-			<img src="img/florian_bellanger.jpg" alt="Florian Bellanger on a red background." width="100">
-		<ul>
-			<li>Florian Bellanger</li>
-		</ul>
-			<img src="img/nancy_silverton.jpeg" alt="Nancy Silverton on a colorful background." width="100">
-		<ul>
-			<li>Nancy Silverton</li>
-		</ul>
-			<img src="img/buddy_valastro.jpg" alt="Buddy Valastro on a white background." width="100">
-		<ul>
-			<li>Buddy Valastro</li>
-		</ul>
-			<img src="img/adriano_zumbo.jpeg" alt="Adriano Zumbo on a colorful background." width="100">
-		<ul>
-			<li>Adriano Zumbo</li>
-		</ul>
-			<img src="img/mary_berry.jpg" alt="Mary Berry on a colorful background." width="100">
-		<ul>
-			<li>Mary Berry</li>
-		</ul>
-			<img src="img/pierre_herme.jpeg" alt="Pierre Herme on a grey background." width="100">
-		<ul>
-			<li>Pierre Herme</li>
-		</ul>
-			<img src="img/elizabeth_falkner.jpg" alt="Elizabeth Falkner on a grey background." width="100">
-		<ul>
-			<li>Elizabeth Falkner</li>
-		</ul>
+
+		<div class="baker_list">
+			<a href="#" class="baker">
+				<img src="img/paul_hollywood_ai.png" alt="Paul Hollywood on blue background.">
+				<span>Paul Hollywood</span>
+			</a>
+
+			<a href="#" class="baker">
+				<img src="img/duff_goldman_ai.png" alt="Duff Goldman holding a whisk on a white background.">
+				<span>Duff Goldman</span>
+			</a>
+
+			<a href="#" class="baker">
+				<img src="img/florian_bellanger_ai.png" alt="Florian Bellanger on a red background.">
+				<span>Florian Bellanger</span>
+			</a>
+
+			<a href="#" class="baker">
+				<img src="img/nancy_silverton_ai.png" alt="Nancy Silverton on a colorful background.">
+				<span>Nancy Silverton</span>
+
+			<a href="#" class="baker">
+				<img src="img/buddy_valastro_ai.png" alt="Buddy Valastro on a white background.">
+				<span>Buddy Valastro</span>
+			</a>
+
+			<a href="#" class="baker">
+				<img src="img/adriano_zumbo_ai.png" alt="Adriano Zumbo on a colorful background.">
+				<span>Adriano Zumbo</span>
+			</a>
+
+			<a href="#" class="baker">
+				<img src="img/mary_berry_ai.png" alt="Mary Berry on a colorful background.">
+				<span>Mary Berry</span>
+
+			<a href="#" class="baker">
+				<img src="img/pierre_herme_ai.png" alt="Pierre Herme on a grey background.">
+				<span>Pierre Herme</span>
+			</a>
+
+			<a href="#" class="baker">
+				<img src="img/elizabeth_falkner_ai.png" alt="Elizabeth Falkner on a grey background.">
+				<span>Elizabeth Falkner</span>
+			</a>
+		</div>
 	</section>
 
-	<hr>
 
-	<section>
+
+	<section class="recipe_section">
 		<h2>Popular</h2>
 
-		<article>
-			<img src="img/chocolate_cake.jpg" alt="A slice of chocolate cake on a plate with a chuck taken out of it." width="200">
-			<h3>Chocolate Layer Cake</h3>
-			<p>4 hours</p>
-			<p>4.5</p>
-		</article>
+		<div class="card_row">
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/chocolate_cake_ai.png" alt="A slice of chocolate cake on a plate with a chuck taken out of it.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+	    		</div>
+	    		<div class="card_info">
+					<h3>Chocolate Layer Cake</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>4 hrs</span>
+						<span><i class="fa-solid fa-star"></i>4.5</span>
+					</div>
+				</div>
+			</article>
 
-		<article>
-			<img src="img/sugar_cookie.jpeg" alt="Plain sugar cookies on a plate." width="200">
-			<h3>Chewy Sugar Cookies</h3>
-			<p>25 minutes</p>
-			<p>4.8</p>
-		</article>
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/sugar_cookies-ai.png" alt="Plain sugar cookies on a plate.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+	    		</div>
+	    		<div class="card_info">
+					<h3>Chewy Sugar Cookies</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>25 min</span>
+						<span><i class="fa-solid fa-star"></i>4.8</span>
+					</div>
+				</div>
+			</article>
 
-		<article>
-			<img src="img/banana_bread.jpeg" alt="A loaf of sliced banana bread on a plate." width="200">
-			<h3>Banana Bread</h3>
-			<p>70 minutes</p>
-			<p>4.3</p>
-		</article>
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/banana_bread_ai.png" alt="A loaf of sliced banana bread on a plate.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+	    		</div>
+	    		<div class="card_info">
+					<h3>Banana Bread</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>70 min</span>
+						<span><i class="fa-solid fa-star"></i>4.3</span>
+					</div>
+				</div>
+			</article>
+		</div>
 	</section>
 
-	<hr>
 
-	<section>
+
+	<section class="recipe_section">
 		<h2>Fall Favorites</h2>
 
-		<article>
-			<img src="img/apple_dumpling.jpg" alt="An apple dumpling in a bowl with a scoop of ice cream." width="200">
-			<h3>Apple Dumpling</h3>
-			<p>1 hour 5 minutes</p>
-			<p>4.9</p>
-		</article>
+		<div class="card_row">
+			<article class="recipe_card">
+					<div class="card_image">
+						<img src="img/apple_dumpling_ai.png" alt="An apple dumpling in a bowl with a scoop of ice cream.">
+						<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    				</button>
+	    			</div>
+	    			<div class="card_info">
+						<h3>Apple Dumpling</h3>
+						<div class="card_info2">
+							<span><i class="fa-solid fa-clock"></i>1 hr 5 min</span>
+							<span><i class="fa-solid fa-star"></i>4.9</span>
+						</div>
+					</div>
+			</article>
 
-		<article>
-			<img src="img/pecan_pie.jpg" alt="Whole pecan pie on a table." width="200">
-			<h3>Pecan Pie</h3>
-			<p>1 hour 15 minutes</p>
-			<p>4.7</p>
-		</article>
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/pecan_pie_ai.png" alt="Whole pecan pie on a table.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+	    		</div>
+	    		<div class="card_info">
+					<h3>Pecan Pie</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>1 hr 15 min</span>
+						<span><i class="fa-solid fa-star"></i>4.7</span>
+					</div>
+				</div>
+			</article>
 
-		<article>
-			<img src="img/pumpkin_spice_cake.jpeg" alt="A pumpkin spice bundt cake with a white icing on top." width="200">
-			<h3>Pumpkin Spice Cake</h3>
-			<p>2 hours 30 minutes</p>
-			<p>4.5</p>
-		</article>
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/pumpkin_spice_cake_ai.png" alt="A pumpkin spice bundt cake with a white icing on top.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+	      				<i class="fa-solid fa-heart"></i>
+	    			</button>
+	    		</div>
+	    		<div class="card_info">
+					<h3>Pumpkin Spice Cake</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>2 hrs 30 min</span>
+						<span><i class="fa-solid fa-star"></i>4.5</span>
+					</div>
+				</div>
+			</article>
 	</section>
 
-	<hr>
 
-	<section>
+
+	<section class="recipe_section">
 		<h2>Recently Viewed</h2>
 
-		<article>
-			<img src="img/strawberry_cheesecake_bars.jpg" alt="A stack of three strawberry cheesecake bars." width="200">
-			<h3>Strawberry Cheesecake Bars</h3>
-			<p>2 hours 50 minutes</p>
-			<p>4.3</p>
-		</article>
+		<div class="card_row">
+			<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/strawberry_cheesecake_bars_ai.png" alt="A stack of three strawberry cheesecake bars.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+		      				<i class="fa-solid fa-heart"></i>
+		    		</button>
+		    	</div>
+		    	<div class="card_info">
+					<h3>Strawberry Cheesecake Bars</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>2 hrs 50 min</span>
+						<span><i class="fa-solid fa-star"></i>4.3</span>
+					</div>
+				</div>
+			</article>
+
+					<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/cinammon_rolls_ai.png" alt="A tray of cinnamon rolss covered in icing.">
+					<button class="favorite_btn" aria-label="Add to favorites">
+		      				<i class="fa-solid fa-heart"></i>
+		    		</button>
+		    	</div>
+		    	<div class="card_info">
+					<h3>Cinnamon Rolls</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>3 hrs</span>
+						<span><i class="fa-solid fa-star"></i>4.9</span>
+					</div>
+				</div>
+			</article>
+
+					<article class="recipe_card">
+				<div class="card_image">
+					<img src="img/strawberry_shortcake_ai.png" alt="A three tier strawberry shortcake">
+					<button class="favorite_btn" aria-label="Add to favorites">
+		      				<i class="fa-solid fa-heart"></i>
+		    		</button>
+		    	</div>
+		    	<div class="card_info">
+					<h3>Strawberry Shortcake</h3>
+					<div class="card_info2">
+						<span><i class="fa-solid fa-clock"></i>50 min</span>
+						<span><i class="fa-solid fa-star"></i>4.8</span>
+					</div>
+				</div>
+			</article>
 	</section>
-
-	<hr>
-
-	<nav>
-  		Home
-  		<i class="fa-solid fa-house"></i>
-  		Search
-  		<i class="fa-solid fa-magnifying-glass"></i>
-  		Favorites
-  		<i class="fa-solid fa-heart"></i>
-  		Profile
-  		<i class="fa-solid fa-user"></i>
-	</nav>
 
 </body>
 </html>
