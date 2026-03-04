@@ -1,370 +1,465 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<title>Dough It Right</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Meow+Script&family=MonteCarlo&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
-</head>
-<body>
-	<nav class="navbar">
-  		<div class="logo">
-  			<a href="index.html" class="logo_link">
-      			<img src="img/placeholder.jpg" alt="Dough It Right logo" width="100">
-      			<span>Dough It Right</span>
-      		</a>
-    	</div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dough it Right is a baking recipe website tailored to your specific tastes.">
+    <meta name="author" content="Meredith Legenhausen">
+    <title>Dough it Right</title>
 
-    	<ul class="nav_links">
-      		<li>
-      			<a href="#"><i class="fa-solid fa-heart"></i> Favorites</a>
-      		</li>
-      		<li>
-      			<a href="#"><i class="fa-solid fa-user"></i> Profile</a>
-      		</li>
-    	</ul>
-  </nav>
-	<header class="hero_section">
-		<h1>Hi, User</h1>
-		<p>Let's get baking!</p>
-		<input type="text" placeholder="Search...">
-	</header>
+   <!-- Bootstrap v5.3.8 -->
+   <!-- LOAD BOOTSTRAP CSS - DO NOT DELETE -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <!-- END LOADING BOOTSTRAP CSS -->
+    
+   <!-- Custom styles - add your own CSS to this stylesheet -->
+    <link href="style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-	<section class="categories">
-	  <div class="category-list">
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Cakes">
-	      <span>Cakes</span>
-	    </a>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+ <nav class="site-navbar navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/placeholder.jpg" alt="Dough It Right logo">
+          Dough It Right
+        </a>
 
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Cookies">
-	      <span>Cookies</span>
-	    </a>
+        <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Bars">
-	      <span>Bars</span>
-	    </a>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-1 mt-2 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-icon-link" href="#"><i class="fa-solid fa-heart"></i> Favorites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-icon-link" href="#"><i class="fa-solid fa-user"></i> Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Cupcakes">
-	      <span>Cupcakes</span>
-	    </a>
+    <!-- ═══════════ HERO ═══════════ -->
+    <header class="hero-section">
+      <p class="hero-eyebrow">✦ Your Personal Recipe Collection ✦</p>
+      <h1 class="hero-title">Hi there, <em>happy baking!</em></h1>
+      <p class="hero-sub">Discover recipes made just for your taste.</p>
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="Search recipes, ingredients…" aria-label="Search recipes">
+      </div>
+    </header>
 
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Pastries">
-	      <span>Pastries</span>
-	    </a>
+    <!-- ═══════════ CATEGORIES ═══════════ -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Browse <span>Categories</span></h2>
+        </div>
+        <div class="category-scroll">
+          <!-- Each category chip -->
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Cakes"></div>
+            <span>Cakes</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Cookies"></div>
+            <span>Cookies</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Bars"></div>
+            <span>Bars</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Cupcakes"></div>
+            <span>Cupcakes</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Pastries"></div>
+            <span>Pastries</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Breads"></div>
+            <span>Breads</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Pies"></div>
+            <span>Pies</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="No-Bake"></div>
+            <span>No-Bake</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Frozen"></div>
+            <span>Frozen</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Layered"></div>
+            <span>Layered</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Breakfast"></div>
+            <span>Breakfast</span>
+          </a>
+          <a href="#" class="category-chip">
+            <div class="chip-img"><img src="img/placeholder.jpg" alt="Under 30 Min"></div>
+            <span>Under 30 Min</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Breads">
-	      <span>Breads</span>
-	    </a>
+    <!-- ═══════════ RECOMMENDED ═══════════ -->
+    <section class="recipes-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Recommended <span>for You</span></h2>
+          <a href="#" class="see-all-link">See all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="recipe-scroll">
 
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Pies">
-	      <span>Pies</span>
-	    </a>
+          <a href="#" class="recipe-card">
+            <div class="card-img-wrap">
+              <img src="img/blueberry_muffins_ai.jpg" alt="An unwrapped blueberry muffin on a plate.">
+          <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Breakfast</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Blueberry Muffins</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 32 min</span>
+                <span><i class="fa-solid fa-star"></i> 4.9</span>
+              </div>
+            </div>
+          </a>
 
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="No-Bake">
-	      <span>No-Bake</span>
-	    </a>
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Frozen">
-	      <span>Frozen</span>
-	    </a>
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Layered">
-	      <span>Layered</span>
-	    </a>
-	    <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Breakfast">
-	      <span>Breakfast</span>
-	    </a>
-	     <a href="#" class="category">
-	      <img src="img/placeholder.jpg" alt="Under 30 Minutes">
-	      <span>Under 30 Minutes</span>
-	    </a>
-	  </div>
-	</section>
+          <a href="#" class="recipe-card">
+            <div class="card-img-wrap">
+              <img src="img/brownies_ai.jpg" alt="Two brownies stacked.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Bars</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Fudge Brownies</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 49 min</span>
+                <span><i class="fa-solid fa-star"></i> 4.5</span>
+              </div>
+            </div>
+          </a>
 
+          <a href="#" class="recipe-card">
+            <div class="card-img-wrap">
+              <img src="img/snickerdoodles_ai.png" alt="Snickerdoodles on a cooling rack.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Cookies</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Snickerdoodles</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 30 min</span>
+                <span><i class="fa-solid fa-star"></i> 4.7</span>
+              </div>
+            </div>
+          </a>
 
+        </div>
+      </div>
+    </section>
 
-	<section class="recipe_section">
-		<h2>Recommended for You</h2>
+    <!-- ═══════════ TOP BAKERS ═══════════ -->
+    <section class="bakers-section">
+      <div class="container">
+        <div class="section-header mb-3">
+          <h2 class="section-title">Top <span>Bakers</span></h2>
+          <a href="#" class="see-all-link" style="color: var(--warm-tan);">See all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="baker-scroll">
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/paul_hollywood.jpg" alt="Paul Hollywood">
+            <span class="baker-name">Paul Hollywood</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/duff_goldman.jpg" alt="Duff Goldman">
+            <span class="baker-name">Duff Goldman</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/florian_bellanger.jpg" alt="Florian Bellanger">
+            <span class="baker-name">Florian Bellanger</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/nancy_silverton.jpeg" alt="Nancy Silverton">
+            <span class="baker-name">Nancy Silverton</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/buddy_valastro.jpg" alt="Buddy Valastro">
+            <span class="baker-name">Buddy Valastro</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/adriano_zumbo.jpeg" alt="Adriano Zumbo">
+            <span class="baker-name">Adriano Zumbo</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/mary_berry.jpg" alt="Mary Berry">
+            <span class="baker-name">Mary Berry</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/pierre_herme.jpeg" alt="Pierre Herme">
+            <span class="baker-name">Pierre Hermé</span>
+          </a>
+          <a href="#" class="baker-chip">
+            <img class="baker-avatar" src="img/elizabeth_falkner.jpg" alt="Elizabeth Falkner">
+            <span class="baker-name">Elizabeth Falkner</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-		<div class="card_row">
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/blueberry_muffins_ai.jpg" alt="An unwrapped blueberry muffin on a plate.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-  				</div>
-				<div class="card_info">
-					<h3>Blueberry Muffins</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>32 min</span>
-						<span><i class="fa-solid fa-star"></i>4.9</span>
-					</div>
-				</div>
-			</article>
+    <!-- ═══════════ POPULAR ═══════════ -->
+    <section class="recipes-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Most <span>Popular</span></h2>
+          <a href="#" class="see-all-link">See all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
 
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/brownies_ai.jpg" alt="Two brownies stacked.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-  				</div>
-				<div class="card_info">
-					<h3>Fudge Brownies</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>49 min</span>
-						<span><i class="fa-solid fa-star"></i>4.5</span>
-					</div>
-				</div>
-			</article>
+        <div class="recipe-scroll">
 
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/snickerdoodles_ai.png" alt="Snickerdoodles on a cooling rack with a bowl of cinammon sugar.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-  				</div>
-				<div class="card_info">
-					<h3>Snickerdoodles</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>30 min</span>
-						<span><i class="fa-solid fa-star"></i>4.7</span>
-					</div>
-				</div>
-			</article>
-		</div>
-	</section>
+          <a href="#" class="recipe-card recipe-card-lg">
+            <div class="card-img-wrap">
+              <img src="img/chocolate_cake_ai.png" alt="A slice of chocolate layer cake.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Cakes</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Chocolate Layer Cake</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 4 hrs</span>
+                <span><i class="fa-solid fa-star"></i> 4.5</span>
+              </div>
+            </div>
+          </a>
 
+          <a href="#" class="recipe-card recipe-card-lg">
+            <div class="card-img-wrap">
+              <img src="img/sugar_cookies-ai.png" alt="Plain sugar cookies on a plate.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Cookies</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Chewy Sugar Cookies</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 25 min</span>
+                <span><i class="fa-solid fa-star"></i> 4.8</span>
+              </div>
+            </div>
+          </a>
 
+          <a href="#" class="recipe-card recipe-card-lg">
+            <div class="card-img-wrap">
+              <img src="img/banana_bread_ai.png" alt="A loaf of sliced banana bread.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Breads</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Banana Bread</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 70 min</span>
+                <span><i class="fa-solid fa-star"></i> 4.3</span>
+              </div>
+            </div>
+          </a>
 
-	<section class="top_bakers">
-		<h2>Top Bakers</h2>
+        </div>
+      </div>
+    </section>
 
-		<div class="baker_list">
-			<a href="#" class="baker">
-				<img src="img/paul_hollywood_ai.png" alt="Paul Hollywood on blue background.">
-				<span>Paul Hollywood</span>
-			</a>
+    <!-- ═══════════ FALL FEATURE BANNER + CARDS ═══════════ -->
+    <section class="recipes-section pt-1">
+      <div class="container">
+        <div class="row g-3 align-items-start mb-4">
+          <!-- Feature Banner -->
+          <div class="col-12 col-md-5 col-lg-4">
+            <div class="feature-banner h-100">
+              <div class="label">✦ Season Pick</div>
+              <h3>Fall Favorites</h3>
+              <p>Warm spices, cozy kitchens, and the best autumn bakes of the year.</p>
+              <a href="#" class="btn-cream">Explore All</a>
+            </div>
+          </div>
+          <!-- Cards -->
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="recipe-scroll">
 
-			<a href="#" class="baker">
-				<img src="img/duff_goldman_ai.png" alt="Duff Goldman holding a whisk on a white background.">
-				<span>Duff Goldman</span>
-			</a>
+              <a href="#" class="recipe-card">
+                <div class="card-img-wrap">
+                  <img src="img/apple_dumpling_ai.png" alt="An apple dumpling with ice cream.">
+                  <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-title-custom">Apple Dumpling</div>
+                  <div class="card-meta">
+                    <span><i class="fa-solid fa-clock"></i> 1 hr 5 min</span>
+                    <span><i class="fa-solid fa-star"></i> 4.9</span>
+                  </div>
+                </div>
+              </a>
 
-			<a href="#" class="baker">
-				<img src="img/florian_bellanger_ai.png" alt="Florian Bellanger on a red background.">
-				<span>Florian Bellanger</span>
-			</a>
+              <a href="#" class="recipe-card">
+                <div class="card-img-wrap">
+                  <img src="img/pecan_pie_ai.png" alt="Whole pecan pie on a table.">
+                  <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-title-custom">Pecan Pie</div>
+                  <div class="card-meta">
+                    <span><i class="fa-solid fa-clock"></i> 1 hr 15 min</span>
+                    <span><i class="fa-solid fa-star"></i> 4.7</span>
+                  </div>
+                </div>
+              </a>
 
-			<a href="#" class="baker">
-				<img src="img/nancy_silverton_ai.png" alt="Nancy Silverton on a colorful background.">
-				<span>Nancy Silverton</span>
+              <a href="#" class="recipe-card">
+                <div class="card-img-wrap">
+                  <img src="img/pumpkin_spice_cake_ai.png" alt="A pumpkin spice bundt cake.">
+                  <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <div class="card-body-custom">
+                  <div class="card-title-custom">Pumpkin Spice Cake</div>
+                  <div class="card-meta">
+                    <span><i class="fa-solid fa-clock"></i> 2 hrs 30 min</span>
+                    <span><i class="fa-solid fa-star"></i> 4.5</span>
+                  </div>
+                </div>
+              </a>
 
-			<a href="#" class="baker">
-				<img src="img/buddy_valastro_ai.png" alt="Buddy Valastro on a white background.">
-				<span>Buddy Valastro</span>
-			</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<a href="#" class="baker">
-				<img src="img/adriano_zumbo_ai.png" alt="Adriano Zumbo on a colorful background.">
-				<span>Adriano Zumbo</span>
-			</a>
+    <!-- ═══════════ RECENTLY VIEWED ═══════════ -->
+    <section class="recipes-section pt-0">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Recently <span>Viewed</span></h2>
+        </div>
+        <div class="recipe-scroll">
 
-			<a href="#" class="baker">
-				<img src="img/mary_berry_ai.png" alt="Mary Berry on a colorful background.">
-				<span>Mary Berry</span>
+          <a href="#" class="recipe-card">
+            <div class="card-img-wrap">
+              <img src="img/strawberry_cheesecake_bars_ai.png" alt="A stack of strawberry cheesecake bars.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Bars</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Strawberry Cheesecake Bars</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 2 hrs 50 min</span>
+                <span><i class="fa-solid fa-star"></i> 4.3</span>
+              </div>
+            </div>
+          </a>
 
-			<a href="#" class="baker">
-				<img src="img/pierre_herme_ai.png" alt="Pierre Herme on a grey background.">
-				<span>Pierre Herme</span>
-			</a>
+          <a href="#" class="recipe-card">
+            <div class="card-img-wrap">
+              <img src="img/cinammon_rolls_ai.png" alt="A tray of cinnamon rolls.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Breads</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Cinnamon Rolls</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 3 hrs</span>
+                <span><i class="fa-solid fa-star"></i> 4.9</span>
+              </div>
+            </div>
+          </a>
 
-			<a href="#" class="baker">
-				<img src="img/elizabeth_falkner_ai.png" alt="Elizabeth Falkner on a grey background.">
-				<span>Elizabeth Falkner</span>
-			</a>
-		</div>
-	</section>
+          <a href="#" class="recipe-card">
+            <div class="card-img-wrap">
+              <img src="img/strawberry_shortcake_ai.png" alt="A three tier strawberry shortcake.">
+              <button class="fav-btn" aria-label="Add to favorites" onclick="event.preventDefault(); this.classList.toggle('active')">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <span class="card-category-badge">Cakes</span>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-title-custom">Strawberry Shortcake</div>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-clock"></i> 50 min</span>
+                <span><i class="fa-solid fa-star"></i> 4.8</span>
+              </div>
+            </div>
+          </a>
 
+        </div>
+      </div>
+    </section>
 
+    <!-- ═══════════ NEWSLETTER ═══════════ -->
+    <section class="newsletter-section">
+      <div class="container">
+        <p class="eyebrow">✦ Stay in the loop ✦</p>
+        <h2>Fresh recipes, <em style="font-style:italic; font-family:'Playfair Display',serif;">weekly.</em></h2>
+        <p>New recipes every Thursday.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button class="btn-plum">Subscribe</button>
+        </div>
+      </div>
+    </section>
 
-	<section class="recipe_section">
-		<h2>Popular</h2>
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <span style="font-family:'Playfair Display',serif; color: var(--cream); font-size:0.95rem;">Dough It Right</span>
+          <div class="d-flex gap-3">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+          </div>
+          <span>&copy; 2025 Dough It Right. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
 
-		<div class="card_row">
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/chocolate_cake_ai.png" alt="A slice of chocolate cake on a plate with a chuck taken out of it.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-	    		</div>
-	    		<div class="card_info">
-					<h3>Chocolate Layer Cake</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>4 hrs</span>
-						<span><i class="fa-solid fa-star"></i>4.5</span>
-					</div>
-				</div>
-			</article>
-
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/sugar_cookies-ai.png" alt="Plain sugar cookies on a plate.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-	    		</div>
-	    		<div class="card_info">
-					<h3>Chewy Sugar Cookies</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>25 min</span>
-						<span><i class="fa-solid fa-star"></i>4.8</span>
-					</div>
-				</div>
-			</article>
-
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/banana_bread_ai.png" alt="A loaf of sliced banana bread on a plate.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-	    		</div>
-	    		<div class="card_info">
-					<h3>Banana Bread</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>70 min</span>
-						<span><i class="fa-solid fa-star"></i>4.3</span>
-					</div>
-				</div>
-			</article>
-		</div>
-	</section>
-
-
-
-	<section class="recipe_section">
-		<h2>Fall Favorites</h2>
-
-		<div class="card_row">
-			<article class="recipe_card">
-					<div class="card_image">
-						<img src="img/apple_dumpling_ai.png" alt="An apple dumpling in a bowl with a scoop of ice cream.">
-						<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    				</button>
-	    			</div>
-	    			<div class="card_info">
-						<h3>Apple Dumpling</h3>
-						<div class="card_info2">
-							<span><i class="fa-solid fa-clock"></i>1 hr 5 min</span>
-							<span><i class="fa-solid fa-star"></i>4.9</span>
-						</div>
-					</div>
-			</article>
-
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/pecan_pie_ai.png" alt="Whole pecan pie on a table.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-	    		</div>
-	    		<div class="card_info">
-					<h3>Pecan Pie</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>1 hr 15 min</span>
-						<span><i class="fa-solid fa-star"></i>4.7</span>
-					</div>
-				</div>
-			</article>
-
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/pumpkin_spice_cake_ai.png" alt="A pumpkin spice bundt cake with a white icing on top.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-	      				<i class="fa-solid fa-heart"></i>
-	    			</button>
-	    		</div>
-	    		<div class="card_info">
-					<h3>Pumpkin Spice Cake</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>2 hrs 30 min</span>
-						<span><i class="fa-solid fa-star"></i>4.5</span>
-					</div>
-				</div>
-			</article>
-	</section>
-
-
-
-	<section class="recipe_section">
-		<h2>Recently Viewed</h2>
-
-		<div class="card_row">
-			<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/strawberry_cheesecake_bars_ai.png" alt="A stack of three strawberry cheesecake bars.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-		      				<i class="fa-solid fa-heart"></i>
-		    		</button>
-		    	</div>
-		    	<div class="card_info">
-					<h3>Strawberry Cheesecake Bars</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>2 hrs 50 min</span>
-						<span><i class="fa-solid fa-star"></i>4.3</span>
-					</div>
-				</div>
-			</article>
-
-					<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/cinammon_rolls_ai.png" alt="A tray of cinnamon rolss covered in icing.">
-					<button class="favorite_btn" aria-label="Add to favorites">
-		      				<i class="fa-solid fa-heart"></i>
-		    		</button>
-		    	</div>
-		    	<div class="card_info">
-					<h3>Cinnamon Rolls</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>3 hrs</span>
-						<span><i class="fa-solid fa-star"></i>4.9</span>
-					</div>
-				</div>
-			</article>
-
-					<article class="recipe_card">
-				<div class="card_image">
-					<img src="img/strawberry_shortcake_ai.png" alt="A three tier strawberry shortcake">
-					<button class="favorite_btn" aria-label="Add to favorites">
-		      				<i class="fa-solid fa-heart"></i>
-		    		</button>
-		    	</div>
-		    	<div class="card_info">
-					<h3>Strawberry Shortcake</h3>
-					<div class="card_info2">
-						<span><i class="fa-solid fa-clock"></i>50 min</span>
-						<span><i class="fa-solid fa-star"></i>4.8</span>
-					</div>
-				</div>
-			</article>
-	</section>
-
-</body>
+<!-- LOAD BOOTSTRAP JAVASCRIPT - DO NOT DELETE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- END LOADING BOOTSTRAP JAVASCRIPT -->
+      
+  </body>
 </html>
